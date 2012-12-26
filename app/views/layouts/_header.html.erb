@@ -1,10 +1,11 @@
 <header>
-		<%= image_tag("snf-logo.gif", :alt => "snapfish logo", :class => "round", :align => "left") %>
+		<% logo =  image_tag("snf-logo.gif", :alt => "snapfish logo", :class => "round", :align => "left") %>
+		<%=link_to logo,root_path%>
         <h1 align="center">
 			Welcome to Snapfish	
 		</h1><br/>
 		<div width="100%" height="65%" align="right" valign="top">
-			<%=link_to "Sign Up",welcome_reg_path %> | 
+			<%=link_to "Sign Up",users_new_path %> | 
 			<%=link_to "Log In",welcome_login_path %> |
 			<%=link_to "Help",welcome_help_path %> 
 		</div>

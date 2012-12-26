@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Snapfish - LoggedIn page</title>
+	</head>
+	<body>
+       
+			Welcome <%=@user.name%>...!<br /><br />
+			You have registered to snapfish with below account details :  
+			First name : 
+			Last name : 
+			Email address :  <%=@user.email%>
+	<!--<%= debug(params) if Rails.env.development? %>-->       
+       <!--<%=render 'layouts/footer'%>-->
+</body>		
+</html>

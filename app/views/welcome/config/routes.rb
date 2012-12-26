@@ -1,14 +1,10 @@
 WelcomeApp::Application.routes.draw do
  # match "/", :to=>"welcome#main"
   #or
-  resources :users
-  
   root :to => 'welcome#main'  
-  
-  #match "/reg", :to=>"welcome#reg"
-  
-  #get "users/new"
-  
+  match "/reg", :to=>"welcome#reg"
+  get "welcome/reg"
+
   get "welcome/login"
 
   get "welcome/help"  
