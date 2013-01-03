@@ -1,16 +1,21 @@
 WelcomeApp::Application.routes.draw do
- # match "/", :to=>"welcome#main"
+  get "sessions/new"
+
+ #match "/", :to=>"welcome#main"
   #or
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
   
-  root :to => 'welcome#main'  
+ root :to => 'welcome#main'  
   
   #match "/reg", :to=>"welcome#reg"
   
   #get "users/new"
+  match 'signup' ,:to => 'users#new'
+  match 'signin' ,:to => 'sessions#new'
+  match 'signout' ,:to => 'sessions#destroy'
   
-  get "welcome/login"
-
+ 
   get "welcome/help"  
   
   # The priority is based upon order of creation:

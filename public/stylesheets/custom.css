@@ -1,0 +1,22 @@
+.container{
+ width : 710px;	
+}
+body
+{
+	background : #cff;
+}
+
+headerer
+{
+	padding-top : 20px;
+}
+
+header img{
+	padding : 1em;
+	background: #fff;
+}
+
+div.field, div.actions
+{
+	margin-bottom: 10px;
+}

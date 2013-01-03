@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Snapfish - Login</title>
+	</head>
+	<body>
+       <%=render 'layouts/header'%>
+       <h1> Log In</h1>
+        <%= form_for(:session, :url => sessions_path) do |f|%>
+        <div class="field_with_errors"><%= flash.now[:error]%></div><br/>
+		<div class="field">
+			<%= f.label :email%><br/>
+			<%= f.text_field :email%>
+		</div>
+		<div class="field">
+			<%= f.label :password%><br/>
+			<%= f.password_field :password%>
+		</div>
+		<div class="actions">
+			<%= f.submit "Log in" %>
+		</div>
+		       
+	 <% end%>
+	<%= debug(params) if Rails.env.development? %>       
+       <%=render 'layouts/footer'%>
+</body>		
+</html>
